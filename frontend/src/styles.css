@@ -1,0 +1,37 @@
+:root {
+  --ink: #1d2733;
+  --sidebar: #17324d;
+  --sidebar-hover: #21486b;
+  --accent: #0f7b6c;
+  --paper: #f4f6f8;
+}
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+.app-shell { display: flex; min-height: 100vh; }
+.app-sidebar {
+  width: 250px; flex-shrink: 0; background: var(--sidebar); color: #e8eef4;
+  display: flex; flex-direction: column; padding: 1rem 0;
+}
+.app-sidebar .brand { padding: 0 1.25rem 1rem; font-weight: 600; font-size: 1.05rem; border-bottom: 1px solid rgba(255,255,255,.12); }
+.app-sidebar .brand small { display: block; font-weight: 400; opacity: .7; }
+.app-sidebar nav { flex: 1; padding-top: .75rem; }
+.app-sidebar a.nav-item {
+  display: block; padding: .6rem 1.25rem; color: #e8eef4; text-decoration: none; border-left: 3px solid transparent;
+}
+.app-sidebar a.nav-item:hover { background: var(--sidebar-hover); }
+.app-sidebar a.nav-item.active { background: var(--sidebar-hover); border-left-color: #5fd0bd; }
+.app-sidebar .user-box { padding: 1rem 1.25rem 0; border-top: 1px solid rgba(255,255,255,.12); font-size: .9rem; }
+.app-main { flex: 1; min-width: 0; padding: 1.5rem; }
+.panel { background: #fff; border: 1px solid #dde3ea; border-radius: 6px; padding: 1.25rem; }
+.stat-value { font-size: 2rem; font-weight: 600; color: var(--accent); }
+.login-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 1rem; }
+.login-card { width: 100%; max-width: 400px; }
+@media (max-width: 767px) {
+  .app-shell { flex-direction: column; }
+  .app-sidebar { width: 100%; }
+  .app-sidebar nav { display: flex; flex-wrap: wrap; padding: .5rem; }
+  .app-sidebar a.nav-item { padding: .4rem .75rem; border-left: 0; }
+}
