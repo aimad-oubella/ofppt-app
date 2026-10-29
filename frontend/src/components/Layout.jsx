@@ -15,6 +15,7 @@ const MENU = [
   { to: '/attestations', label: 'Attestations' },
   { to: '/checklists', label: 'Check-lists diplômes' },
   { to: '/emargement', label: "Listes d'émargement" },
+  { to: '/referentiels', label: 'Référentiels', roles: ['administrateur'] },
   { to: '/parametres', label: 'Utilisateurs et paramètres', roles: ['administrateur'] },
 ];
 
